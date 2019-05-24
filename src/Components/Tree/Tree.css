@@ -1,0 +1,29 @@
+.Tree {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.Result {
+  width: 100%;
+  background-color: lightgrey;
+  font-size: 20px;
+}
+input {
+  width: 100%;
+  font-size: 20px;
+}
+header {
+  width: 100%;
+  margin: 10px;
+}
+
+.element {
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 10px;
+  border-radius: 6px;
+  display: flex;
+  padding: 30px 15px;
+}
