@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
-import Tree from "./Components/Tree/Tree";
+import MainTree from "./Components/MainTree/MainTree";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Tree title="Root" />
+        <MainTree />
       </div>
     );
   }

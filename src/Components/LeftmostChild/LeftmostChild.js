@@ -1,27 +1,23 @@
 import React, { Component } from "react";
-import "./Tree.css";
+import "./LeftmostChild.css";
 import { connect } from "react-redux";
-import TreeA from "../TreeA/TreeA";
-import TreeB from "../TreeB/TreeB";
 
-class Tree extends Component {
+class LeftmostChild extends Component {
   state = { value: "" };
-
-  handleChange = event => {
-    this.setState({ value: event.target.value });
-  };
 
   render() {
     return (
-      <div className="Tree element">
-        <header>{this.props.title}</header>
-        <TreeA />
-        <TreeB />
+      <div className="Child element">
+        <center> D </center>
+        <textarea
+          type="text"
+          value={this.props.val}
+          onChange={e => this.props.onUserInput(e.target.value)}
+        />
       </div>
     );
   }
 }
-
 const mapStateToProps = state => {
   return {
     val: state.value
@@ -36,4 +32,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Tree);
+)(LeftmostChild);

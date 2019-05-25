@@ -1,23 +1,29 @@
 import React, { Component } from "react";
-import "./InputNode.css";
+import "./MainTree.css";
 import { connect } from "react-redux";
+import LeftSubtree from "../LeftSubtree/LeftSubtree";
+import RightSubtree from "../RightSubtree/RightSubtree";
 
-class InputNode extends Component {
-  state = { value: "" };
+class MainTree extends Component {
+  state = {
+    value: ""
+  };
+
+  onUserInput = newVal => {
+    this.setState({ value: newVal });
+  };
 
   render() {
     return (
-      <div className="InputNode element">
-        <header> a1 </header>
-        <input
-          type="text"
-          value={this.props.val}
-          onChange={e => this.props.onUserInput(e.target.value)}
-        />
+      <div className="Root element">
+        <center> A </center>
+        <LeftSubtree />
+        <RightSubtree />
       </div>
     );
   }
 }
+
 const mapStateToProps = state => {
   return {
     val: state.value
@@ -32,4 +38,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(InputNode);
+)(MainTree);
