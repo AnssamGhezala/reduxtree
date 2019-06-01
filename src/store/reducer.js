@@ -1,11 +1,11 @@
 const initialState = {
-  value: ""
+  inputValue: ""
 };
 
 const reducer = (state = initialState, action) => {
   if (action.type === "USER_INPUT") {
     return {
-      value: action.value
+      inputValue: action.inputValue
     };
   }
   return state;

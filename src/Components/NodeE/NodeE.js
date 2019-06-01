@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import "./RightmostChild.css";
+import "./NodeE.css";
 import { connect } from "react-redux";
 
-class RightmostChild extends Component {
-  state = { value: "" };
-
+class NodeE extends Component {
   render() {
     return (
       <div className="Child element">
@@ -16,8 +14,8 @@ class RightmostChild extends Component {
 }
 const mapStateToProps = state => {
   return {
-    val: state.value
+    val: state.inputValue
   };
 };
 
-export default connect(mapStateToProps)(RightmostChild);
+export default connect(mapStateToProps)(NodeE);
