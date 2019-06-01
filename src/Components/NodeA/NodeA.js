@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "./MainTree.css";
+import "./NodeA.css";
 import { connect } from "react-redux";
-import LeftSubtree from "../LeftSubtree/LeftSubtree";
-import RightSubtree from "../RightSubtree/RightSubtree";
+import NodeB from "../NodeB/NodeB";
+import NodeC from "../NodeC/NodeC";
 
-class MainTree extends Component {
+class NodeA extends Component {
   state = {
     value: ""
   };
@@ -17,8 +17,8 @@ class MainTree extends Component {
     return (
       <div className="Root element">
         <center> A </center>
-        <LeftSubtree />
-        <RightSubtree />
+        <NodeB />
+        <NodeC />
       </div>
     );
   }
@@ -38,4 +38,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(MainTree);
+)(NodeA);

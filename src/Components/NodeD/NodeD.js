@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import "./LeftmostChild.css";
+import "./NodeD.css";
 import { connect } from "react-redux";
 
-class LeftmostChild extends Component {
-  state = { value: "" };
-
+class NodeD extends Component {
   render() {
     return (
       <div className="Child element">
@@ -26,10 +24,11 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onUserInput: value => dispatch({ type: "USER_INPUT", value: value })
+    onUserInput: inputValue =>
+      dispatch({ type: "USER_INPUT", inputValue: inputValue })
   };
 };
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(LeftmostChild);
+)(NodeD);
